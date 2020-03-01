@@ -1,0 +1,20 @@
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets']
+on_event = 'InsertEnter'
+on_ft = ['snippet']
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = 'let g:deoplete#enable_at_startup = 1'
+if = '''has('python3')'''
+on_event = 'InsertEnter'
+
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+on_event = 'InsertEnter'
+
+
+
+
