@@ -2,11 +2,15 @@
 " setting
 set autoread
 set encoding=utf-8
+set expandtab
 set fenc=utf-8
 set fileencodings=utf-8,euc-jp,sjis,cp932,iso-2022-jp
 " set mouse=a
 set noswapfile
+set shiftwidth=2
 set showcmd
+set softtabstop=2
+set tabstop=2
 set timeoutlen=400
 set ttyfast
 " set ttymouse=xterm2
@@ -38,12 +42,6 @@ set display=lastline
 set laststatus=2
 set listchars=eol:\|,tab:>-,trail:-,extends:>,precedes:<,nbsp:%
 set pumheight=10
-
-" tab
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
 
 " file type
 augroup fileTypeConvert
@@ -113,6 +111,7 @@ vnoremap < <gv
 
 
 
+" tab page
 function! s:SID_PREFIX()
     return matchstr(expand('<sfile>'),'<SNR>\d\+_\zeSID_PREFIX$')
 endfunction
