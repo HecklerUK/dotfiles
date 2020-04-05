@@ -26,6 +26,7 @@ repo = 'tpope/vim-fugitive'
 repo = 'dense-analysis/ale'
 hook_add = '''
   let g:ale_sign_column_always = 1
+  let g:ale_cpp_gcc_options = "-std=c++17 -Wall"
   nmap <silent> <C-k> <Plug>(ale_previous_wrap)
   nmap <silent> <C-j> <Plug>(ale_next_wrap)
   let g:ale_linters = {
