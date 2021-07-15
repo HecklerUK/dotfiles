@@ -5,6 +5,7 @@
 sudo apt -y install neovim
 sudo apt -y install language-pack-ja
 cp .bashrc ~
+cp .screenrc ~
 source ~/.bashrc
 mkdir ~/.config
 mkdir ~/.config/nvim

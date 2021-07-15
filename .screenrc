@@ -1,0 +1,35 @@
+# common setting
+escape ^Uu
+startup_message off
+shell /bin/bash
+defscrollback 1024
+shelltitle '$ |sh'
+chdir
+vbell on
+multiuser off
+altscreen off
+
+# encode
+defc1 off
+defutf8 on
+defencoding UTF-8
+
+# key bind
+bind + resize +5
+bind - resize -5
+bind U eval "encoding utf8"
+bind E eval "encoding euc-jp"
+bind J eval "encoding sjis"
+bind . source $HOME/.screenrc
+
+# color setting
+attrcolor b ".I"
+defbce on
+
+# terminfo
+term screen-256color
+
+# caption and hardstatus
+caption always " %-w%{= BW}%n %t%{-}%+w %= %2`"
+hardstatus alwayslastline " %h %= [%02c %m/%d(%D)]"
+
