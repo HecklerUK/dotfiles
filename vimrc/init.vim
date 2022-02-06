@@ -21,6 +21,8 @@ inoremap (<CR> (<CR>)<UP><C-o>$<CR>
 set ambiwidth=double
 set autoindent
 set cursorline
+set termguicolors
+
 "set list
 set matchtime=1
 set number
@@ -113,6 +115,7 @@ vnoremap < <gv
 
 
 
+
 function! s:SID_PREFIX()
     return matchstr(expand('<sfile>'),'<SNR>\d\+_\zeSID_PREFIX$')
 endfunction
@@ -199,6 +202,8 @@ if dein#check_install()
 endif
 
 filetype plugin indent on
+" if runtime error do that
+" :call dein#recache_runtimepath()
 syntax enable
 
 

@@ -4,6 +4,8 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
+#in insertmode and using ctrl+shift+v or middle-click,
+#automatically :set paste
 [[plugins]]
 repo = 'ConradIrwin/vim-bracketed-paste'
 
@@ -13,6 +15,7 @@ hook_add = '''
   let g:indentLine_char = '¦'
 '''
 
+#trailing whitespace to be highlighted in red and remove
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 
@@ -22,6 +25,7 @@ repo = 'kana/vim-submode'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
+#check syntax
 [[plugins]]
 repo = 'dense-analysis/ale'
 hook_add = '''
@@ -46,6 +50,7 @@ hook_add = '''
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 '''
 
+#run commands and show its result quickly
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 hook_add = '''
@@ -65,14 +70,17 @@ hook_add = '''
   command! ZQuickrun :QuickRun -input =@+
 '''
 
+#help you read complex code by showing diff level of parentheses in diff color
 [[plugins]]
 repo = 'luochen1990/rainbow'
 hook_add = 'let g:rainbow_active = 1'
 
+#fuzzy finder in vim
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 hook_add = 'set rtp+=~/.fzf'
 
+#show a git diff in the sign column
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 
@@ -91,15 +99,15 @@ repo = 'Townk/vim-autoclose'
 repo = 'joshdick/onedark.vim'
 hook_add = 'colorscheme onedark'
 
-#[[plugins]]
-#repo    = 'vim-airline/vim-airline'
-#depends = ['vim-airline-themes']
-#hook_add = '''
-#  let g:airline_theme = 'deus'
-#'''
-#
-#[[plugins]]
-#repo = 'vim-airline/vim-airline-themes'
+[[plugins]]
+repo    = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
+hook_add = '''
+  let g:airline_theme = 'deus'
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo =  'Shougo/unite.vim'
